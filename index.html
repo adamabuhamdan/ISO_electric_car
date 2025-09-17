@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BlueVolt — Electric Cars</title>
+  <title> Electric Cars</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -226,17 +226,60 @@
       font-weight: 500;
     }
 
-    /* SECTION 3 - Team */
-    .team{padding:60px 6vw; background:linear-gradient(135deg, #001b33, #003366)}
-    .team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-    .member{display:flex;align-items:center;gap:18px;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(0, 119, 255, 0.2), rgba(0, 212, 255, 0.1));box-shadow:0 8px 20px rgba(0, 212, 255, 0.1);transition:transform .28s ease}
-    .member:hover{transform:translateY(-6px)}
-    .avatar{width:84px;height:84px;border-radius:50%;flex:0 0 84px;background:linear-gradient(135deg,var(--blue-200),var(--blue-400));display:grid;place-items:center;color:#001b33;font-weight:800;font-size:22px}
-    .member .info h4{margin:0 0 6px; color: var(--blue-200)}
-    .member .info p{margin:0;color:#ffffff;opacity:0.9}
-
-    /* Different look for second two members */
-    .member.alt{background:linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 119, 255, 0.1));border:1px solid rgba(0, 212, 255, 0.2)}
+    /* TEAM SECTION - NEW STYLES */
+    .team-feature {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(180deg, rgba(0, 212, 255, 0.3), rgba(0, 119, 255, 0.2));
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      transition: transform .35s ease, box-shadow .35s ease;
+      height: 250px;
+    }
+    
+    .team-feature:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(0, 212, 255, 0.25);
+    }
+    
+    .team-img-container {
+      flex: 0 0 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .team-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--blue-200);
+    }
+    
+    .team-info {
+      flex: 1;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .team-info h2 {
+      margin: 0 0 8px;
+      color: #001b33;
+      font-size: 24px;
+      font-weight: 800;
+    }
+    
+    .team-info h3 {
+      margin: 0;
+      color: var(--blue-400);
+      font-size: 18px;
+      font-weight: 600;
+    }
 
     /* FOOTER */
     footer {
@@ -382,6 +425,35 @@
         width: 100%;
         justify-content: center;
       }
+      
+      /* Responsive team section */
+      .team-feature {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+      }
+      
+      .team-img-container {
+        flex: 0 0 auto;
+        padding: 20px 20px 0;
+      }
+      
+      .team-img {
+        width: 150px;
+        height: 150px;
+      }
+      
+      .team-info {
+        padding: 20px;
+      }
+      
+      .team-info h2 {
+        font-size: 20px;
+      }
+      
+      .team-info h3 {
+        font-size: 16px;
+      }
     }
     
     @media (max-width:480px){
@@ -430,6 +502,19 @@
         padding: 8px 12px;
         font-size: 14px;
       }
+      
+      .team-img {
+        width: 120px;
+        height: 120px;
+      }
+      
+      .team-info h2 {
+        font-size: 18px;
+      }
+      
+      .team-info h3 {
+        font-size: 14px;
+      }
     }
 
     /* small utility */
@@ -446,7 +531,7 @@
       <div class="symbol">ISO</div>
       <div>
         <div style="font-weight:800">ElectricVehicles </div>
-        <div style="font-size:12px;color:var(--blue-400);margin-top:2px">Electric Mobility</div>
+       
       </div>
     </div>
     
@@ -470,13 +555,14 @@
   <main>
     <!-- HERO / FIRST SECTION -->
     <section id="home" class="hero">
-      <div class="left fade-in">
+      <div class="left fade-in" style="display: flex;justify-content: center; align-items: center;">
         <div class="car-wrap">
           <div class="car-card" role="img" aria-label="Electric car illustration">
             <!-- Stylized car SVG -->
            
-           <img src="/images/iso.png" alt="" style="width: 250px;height: 250px;">
-           <img src="/images/iso1.png" alt="" style="width: 250px;height: 250px;">
+           <img src="/images/iso.png" alt="" style="width: 250px;height: 350px;">
+           
+           <img src="/images/iso1.png" alt="" style="width: 250px;height: 350px;">
 
           </div>
         </div>
@@ -485,9 +571,32 @@
         <h1>Technical Committee Title: Electric Vehicles</h1>
         <h2>Working Group Title: Urban Electric Vehicle Infrastructure.</h2>
         <p>Project/Work Item Proposal Title: Urban Electric Vehicle Hubs with Integrated Smart Grid Technology</p>
-      </div>
-    </section>
 
+      </div>
+    
+    </section>
+      <div style="display: flex;justify-content: center;align-items: center;"><h1 style="color: #ffffff;">We were one of the <span style="color: #00d4ff;">top five </span> teams globally.</h1></div>
+       <!-- HERO / FIRST SECTION -->
+    <section id="home" class="hero">
+      <div class="left fade-in" style="display: flex;justify-content: center; align-items: center;">
+        <div class="car-wrap" >
+          <div class="car-card" role="img" aria-label="Electric car illustration">
+            <!-- Stylized car SVG -->
+           
+           <img src="/images/copm.jpg" alt="" style="width: 400px;height: 500px;">
+         
+
+          </div>
+        </div>
+      </div>
+      <div class="right fade-in">
+        <h1 style="font-size: 100px;">ISINEG</h1>
+        <h2 style="color: #ffffff;font-size: 50px;">International and National Student Standard Technical Committees.</h2>
+        <p>Empowering students to make lives easier, safer, and better through standards</p>
+
+      </div>
+    
+    </section>
     <!-- FEATURES / SECOND SECTION (UPDATED) -->
     <section id="features" class="features">
       <h1 class="section-title"  style="color: #001b33">Key Features</h1>
@@ -497,7 +606,7 @@
         <!-- Card 1 -->
         <article class="feature fade-in" style="height: 500px;">
           <div class="feature-img-container">
-            <img src="/images/The Impact of Artificial Intelligence on Car Design.jpg" alt="AI in Car Design" class="feature-img">
+            <img src="/images/1.jpg" alt="AI in Car Design" class="feature-img">
           </div>
           <div class="overlay">
             <h3>The Impact of Artificial Intelligence on Car Design</h3>
@@ -508,7 +617,7 @@
         <!-- Card 2 -->
         <article class="feature fade-in" style="height: 500px;">
           <div class="feature-img-container">
-            <img src="/images/Electric vs_ Gas_ Which Cars Really Save You More Money_.jpg" alt="Electric vs Gas Cars" class="feature-img">
+            <img src="/images/2.jpg" alt="Electric vs Gas Cars" class="feature-img">
           </div>
           <div class="overlay">
             <h3>Electric vs. Gas: Which Cars Really Save You More?</h3>
@@ -519,7 +628,7 @@
         <!-- Card 3 -->
         <article class="feature fade-in" style="height: 500px;">
           <div class="feature-img-container">
-            <img src="/images/Discover how your credit score can impact the….jpg" alt="Credit Score Impact" class="feature-img">
+            <img src="/images/3.jpg" alt="Credit Score Impact" class="feature-img">
           </div>
           <div class="overlay">
             <h3>How Your Credit Score Impacts Car Financing</h3>
@@ -530,7 +639,7 @@
         <!-- Card 4 -->
         <article class="feature fade-in" style="height: 500px;">
           <div class="feature-img-container">
-            <img src="/images/Cyber security image _ Global security _ Protecting devices.jpg" alt="Cybersecurity in Automotive" class="feature-img">
+            <img src="/images/4.jpg" alt="Cybersecurity in Automotive" class="feature-img">
           </div>
           <div class="overlay">
             <h3>Cybersecurity in the Automotive World</h3>
@@ -541,62 +650,57 @@
     </section>
 
     
-    <!-- TEAM / THIRD SECTION -->
+    <!-- TEAM / THIRD SECTION - UPDATED -->
     <section id="team" class="features">
-      <h1    style="color: #001b33;">Our Team</h1>
+      <h1 style="color: #001b33;">Our Team</h1>
       <p class="subtle" style="margin-bottom:20px">Meet the experts behind our success.</p>
-      <div class="features-grid" >
+      <div class="features-grid">
         
         <!-- Card 1 -->
-         
-        <article class="feature fade-in circle-image "style="height: 250px;">
-          <div class="feature-img-container">
-            <img src="/images/adam.png" alt="Adam Abu Hamdan" class="feature-img">
+        <article class="team-feature fade-in">
+          <div class="team-img-container">
+            <img src="/images/adam.png" alt="Adam Abu Hamdan" class="team-img">
           </div>
-          <div class="overlay">
-            <h2 style="color: #001b33;">Adam Abu Hamdan</h2>
-            <h3 style="color: #ffffff;" >Committee manager</h3>
-             
-           
+          <div class="team-info">
+            <h1>Adam Abu Hamdan</h1>
+            <h2>Committee manager</h2>
+            <h4 style="color: #003366;"><span style="color: #ffffff;">My field : </span>Computer science</h4>
           </div>
-          
-       
         </article>
         
-        
-        
-
         <!-- Card 2 -->
-        <article class="feature fade-in circle-image"   style="height: 250px;">
-          <div class="feature-img-container">
-            <img src="/images/girl.png" alt="Sajeda Sami" class="feature-img">
+        <article class="team-feature fade-in">
+          <div class="team-img-container">
+            <img src="/images/girl.png" alt="Sajeda Sami" class="team-img">
           </div>
-          <div class="overlay">
-            <h2 style="color: #001b33;">Sajeda Sami</h2>
-            <h3 style="color: #ffffff;">Chairperson</h3>
-          
+          <div class="team-info">
+            <h1>Sajeda Sami</h1>
+            <h2>Chairperson</h2>
+            <h4 style="color: #003366;"><span style="color: #ffffff;">My field : </span>Mechanical engineering</h4>
           </div>
         </article>
 
         <!-- Card 3 -->
-        <article class="feature fade-in circle-image" style="height: 250px;">
-          <div class="feature-img-container">
-            <img src="/images/1000138675.jpg" alt="Anan Saadeh" class="feature-img">
+        <article class="team-feature fade-in">
+          <div class="team-img-container">
+            <img src="/images/1000138675.jpg" alt="Anan Saadeh" class="team-img">
           </div>
-          <div class="overlay">
-            <h2 style="color: #001b33;">Anan Saadeh</h2>
-            <h3 style="color: #ffffff;">Convenor</h3>
+          <div class="team-info">
+            <h1>Anan Saadeh</h1>
+            <h2>Convenor</h2>
+            <h4 style="color: #003366;"><span style="color: #ffffff;">My field : </span>Computer engineering</h4>
           </div>
         </article>
 
         <!-- Card 4 -->
-        <article class="feature fade-in circle-image" style="height: 250px;">
-          <div class="feature-img-container">
-            <img src="/images/girl.png" alt="Hanan Sowan" class="feature-img">
+        <article class="team-feature fade-in">
+          <div class="team-img-container">
+            <img src="/images/girl.png" alt="Hanan Sowan" class="team-img">
           </div>
-          <div class="overlay">
-            <h2  style="color: #001b33;">Hanan Sowan</h2>
-            <h3 style="color: #ffffff;">Project Leader</h3>
+          <div class="team-info">
+            <h1>Hanan Sowan</h1>
+            <h2>Project Leader</h2>
+             <h4 style="color: #003366;"><span style="color: #ffffff;">My field : </span>Computer engineering</h4>
           </div>
         </article>
       </div>
